@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X, MapPin, Phone, Mail } from "lucide-react";
-import ElanciLogo from "../assets/untitled folder/ElanciLogo.jpg";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 
@@ -60,14 +59,6 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" onClick={closeMenu} className="flex items-center gap-3">
-            <motion.img
-              src={ElanciLogo}
-              alt="Elanci Logo"
-              className={`${isScrolled ? "hidden" : "text-white"} w-12 h-12 rounded-full shadow-md`}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-            />
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -87,7 +78,7 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-10">
-            {navLinks.map((link) => (
+            {navLinks.map((link)=> (
               <Link
                 key={link.path}
                 to={link.path}
