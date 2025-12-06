@@ -1,14 +1,6 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Search,
-  Twitter
-} from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const carouselData = [
   {

@@ -1,20 +1,18 @@
-import { LuggageIcon, TentTree } from "lucide-react";
-import { motion } from "framer-motion"
 
-const IntroLinks = [
-    {
-        icon: LuggageIcon,
-        title: "Exciting Activities",
-        description:
-            "Discover thrilling adventures and activities tailored for every traveler.",
-    },
-    {
-        icon: TentTree,
-        title: "Cultural Experiences",
-        description:
-            "Immerse yourself in local traditions and cultures around the world.",
-    },
-];
+// const IntroLinks = [
+//     {
+//         icon: LuggageIcon,
+//         title: "Exciting Activities",
+//         description:
+//             "Discover thrilling adventures and activities tailored for every traveler.",
+//     },
+//     {
+//         icon: TentTree,
+//         title: "Cultural Experiences",
+//         description:
+//             "Immerse yourself in local traditions and cultures around the world.",
+//     },
+// ];
 
 const Intro = () => {
     return (
