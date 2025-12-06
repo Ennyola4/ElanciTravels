@@ -58,9 +58,9 @@ const Tours = () => {
                                     {item.titel}
                                 </span>
                                 <span
-                                    className={`${item.bgColor[0]} flex items-center text-xs px-2 py-1 rounded-full ${item.textColor[0]}`}
+                                    className={`${item.bgColor[0]} flex items-center text-[10PX] px-2 py-1 rounded-full ${item.textColor[0]}`}
                                 >
-                                    <Star className="h-3 w-3 inline mr-2 items-center"/>
+                                    <Star size={12} className="inline mr-2 items-center"/>
                                     {item.rating}
                                 </span>
                             </div>

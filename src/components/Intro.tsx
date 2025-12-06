@@ -29,7 +29,7 @@ const Intro = () => {
             "
             >
                 {/* Box 1 */}
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 2 }}
@@ -50,11 +50,11 @@ const Intro = () => {
                             </div>
                         ))}
                     </div>
-                </motion.div>
+                </motion.div> */}
 
 
                 {/* Box 2 */}
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 2 }}
@@ -68,13 +68,13 @@ const Intro = () => {
                         Whether you're seeking adventure, relaxation, cultural immersion,
                         or a mix of everything, we make your travel dreams come true.
                     </p>
-                </motion.div>
+                </motion.div> */}
 
 
             </div>
 
             {/* Spacer below to maintain layout flow */}
-            <div className="h-72 md:h-80 lg:h-35" />
+            {/* <div className="h-72 md:h-80 lg:h-35" /> */}
         </div>
     );
 };

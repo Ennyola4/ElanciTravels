@@ -76,7 +76,7 @@ const OurAbout = () => {
                 <div className="w-full lg:w-1/2 lg:text-left mb-10 p-4 m-4 lg:mb-0">
                     <h1 className="text-5xl sm:text-5xl  font-semibold text-white mb-6">About Us</h1>
                     <p className="text-gray-50 text-base sm:text-lg leading-relaxed mb-4" data-aos="fade-left">
-                        At <span className="font-semibold text-yellow-500">Elanci Travels</span>, we craft unforgettable travel experiences across the world.
+                        At Elanci Travels, we craft unforgettable travel experiences across the world.
                     </p>
                     <p className="text-gray-50 text-base sm:text-lg leading-relaxed" data-aos="fade-left">
                         From serene beach escapes to thrilling safaris and heritage tours, Elanci Travels turns every journey into a story worth remembering.

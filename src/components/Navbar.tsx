@@ -35,7 +35,7 @@ const Navbar = () => {
       }`}
     >
       {/* Top Bar (Desktop Only) */}
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-start px-6 py-2 transition-all duration-500">
           <div className="flex gap-8 text-white text-xs">
             <div className="flex items-center gap-1">
@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">

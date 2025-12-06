@@ -56,10 +56,10 @@ const HomeCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-[600px] md:h-[600px] overflow-hidden">
+    <div className="relative w-full h-[900px] md:h-[900px] overflow-hidden">
       <Slider {...settings}>
         {carouselData.map((slide) => (
-          <div key={slide.id} className="relative h-[500px] md:h-[600px]">
+          <div key={slide.id} className="relative h-[800px] md:h-[820px]">
             {/* Background */}
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -76,77 +76,7 @@ const HomeCarousel = () => {
     text-white px-6 md:px-16
   "
             >
-              <div className="flex items-center justify-between w-full">
-                {/* Social Icons (Left) */}
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 2 }}
-                  className="hidden md:flex flex-col gap-8 p-2 rounded-full ">
-                  {[
-                    {
-                      icon: <Facebook className="w-5 h-5" />,
-                      label: "Facebook",
-                      color: "bg-blue-600",
-                    },
-                    {
-                      icon: <Instagram className="w-5 h-5" />,
-                      label: "Instagram",
-                      color: "bg-orange-500",
-                    },
-                    {
-                      icon: <Twitter className="w-5 h-5" />,
-                      label: "Twitter",
-                      color: "bg-sky-400",
-                    },
-                    {
-                      icon: <Linkedin className="w-5 h-5" />,
-                      label: "LinkedIn",
-                      color: "bg-sky-400",
-                    },
-                  ].map((item, index) => (
-                    <div key={index} className="relative group flex items-center">
-                      {/* Icon */}
-                      <span className="text-white cursor-pointer transition-all duration-300 group-hover:scale-125 group-hover:text-blue-400">
-                        {item.icon}
-                      </span>
-
-
-                      {/* Tooltip */}
-                      <span
-                        className={`
-          absolute left-8 top-1/2 -translate-y-1/2
-          ${item.color} text-white text-[12px] font-semibold
-          px-2 py-1 rounded-md shadow-md
-          opacity-0 group-hover:opacity-100
-          translate-x-2 group-hover:translate-x-0
-          transition-all duration-500
-          whitespace-nowrap
-        `}
-                      >
-                        {item.label}
-                      </span>
-                    </div>
-                  ))}
-                </motion.div>
-
-
-                {/* Title + Description (Right) */}
-                <div className="max-w-2xl text-center md:text-right flex flex-col items-center justify-center md:items-end">
-                  <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
-                    {slide.title}
-                  </h2>
-                  <p className="text-lg md:text-2xl mb-6 animate-fade-up text-blue-300">
-                    {slide.subtitle}
-                  </p>
-                  <button className="px-10 py-2 cursor-pointer hover:bg-[#0C2F37] rounded-md border transition-all duration-500 text-white font-semibold hover:shadow-lg animate-fade-up-delay">
-                    <Search className="inline w-5 h-5 mr-2 mb-1" />
-                    Explore Now
-                  </button>
-                </div>
-
-              </div>
+          
             </div>
 
           </div>
