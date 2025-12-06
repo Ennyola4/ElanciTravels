@@ -12,7 +12,7 @@ const Comments = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
@@ -284,7 +284,7 @@ const Comments = () => {
             key={currentIndex}
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 5, ease: "linear" }}
+            transition={{ duration: 10, ease: "linear" }}
             className="h-full bg-linear-to-r from-cyan-400 to-teal-400"
           />
         </div>
