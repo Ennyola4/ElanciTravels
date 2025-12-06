@@ -95,7 +95,7 @@ const Comments = () => {
   };
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-24 bg-gradient-to-b from-white to-gray-50/30">
+    <div className="px-4 sm:px-6 lg:px-8 py-24 bg-linear-to-b from-white to-gray-50/30">
       {/* ===== Header ===== */}
       <motion.div
         initial="hidden"
@@ -113,7 +113,7 @@ const Comments = () => {
         </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-5">
           Voices From Our{" "}
-          <span className="bg-gradient-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">
             Community
           </span>
         </h1>
@@ -121,7 +121,7 @@ const Comments = () => {
           Hear what people are saying about their journey with{" "}
           <span className="font-semibold text-gray-900 relative">
             Elanci Travels
-            <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-gradient-to-r from-cyan-400 to-teal-400" />
+            <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-linear-to-r from-cyan-400 to-teal-400" />
           </span>
           .
         </p>
@@ -136,10 +136,10 @@ const Comments = () => {
         className="relative max-w-6xl mx-auto"
       >
         {/* Decorative Elements */}
-        <div className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-cyan-100/30 to-teal-100/30 rounded-full blur-3xl" />
-        <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-gradient-to-tr from-cyan-100/20 to-teal-100/20 rounded-full blur-3xl" />
+        <div className="absolute -top-10 -left-10 w-40 h-40 bg-linear-to-br from-cyan-100/30 to-teal-100/30 rounded-full blur-3xl" />
+        <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-linear-to-tr from-cyan-100/20 to-teal-100/20 rounded-full blur-3xl" />
 
-        <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl shadow-gray-200/50 border border-gray-100 overflow-hidden">
+        <div className="relative bg-linear-to-br from-white to-gray-50 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl shadow-gray-200/50 border border-gray-100 overflow-hidden">
           {/* Quote Icon */}
           <Quote className="absolute top-8 right-8 w-24 h-24 text-cyan-50 stroke-[0.5]" />
 
@@ -163,14 +163,14 @@ const Comments = () => {
                   className="relative"
                 >
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full blur-lg opacity-40 animate-pulse" />
+                    <div className="absolute inset-0 bg-linear-to-r from-cyan-400 to-teal-400 rounded-full blur-lg opacity-40 animate-pulse" />
                     <img
                       src={comments[currentIndex].image}
                       alt={comments[currentIndex].name}
                       className="relative h-32 w-32 sm:h-40 sm:w-40 object-cover rounded-full border-4 border-white shadow-2xl"
                     />
                     <motion.div
-                      className="absolute -bottom-3 -right-3 bg-gradient-to-r from-cyan-500 to-teal-500 p-3 rounded-full shadow-lg"
+                      className="absolute -bottom-3 -right-3 bg-linear-to-r from-cyan-500 to-teal-500 p-3 rounded-full shadow-lg"
                       animate={{ rotate: 360 }}
                       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                     >
@@ -232,7 +232,7 @@ const Comments = () => {
             onClick={handlePrev}
             whileHover={{ scale: 1.1, x: -5 }}
             whileTap={{ scale: 0.9 }}
-            className="absolute top-1/2 left-4 -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white p-3.5 rounded-full shadow-lg shadow-cyan-200 backdrop-blur-sm transition-all duration-300 z-10"
+            className="absolute top-1/2 left-4 -translate-y-1/2 bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white p-3.5 rounded-full shadow-lg shadow-cyan-200 backdrop-blur-sm transition-all duration-300 z-10"
           >
             <ChevronLeft className="w-6 h-6" />
           </motion.button>
@@ -241,7 +241,7 @@ const Comments = () => {
             onClick={handleNext}
             whileHover={{ scale: 1.1, x: 5 }}
             whileTap={{ scale: 0.9 }}
-            className="absolute top-1/2 right-4 -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white p-3.5 rounded-full shadow-lg shadow-cyan-200 backdrop-blur-sm transition-all duration-300 z-10"
+            className="absolute top-1/2 right-4 -translate-y-1/2 bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white p-3.5 rounded-full shadow-lg shadow-cyan-200 backdrop-blur-sm transition-all duration-300 z-10"
           >
             <ChevronRight className="w-6 h-6" />
           </motion.button>
@@ -262,7 +262,7 @@ const Comments = () => {
                 <div
                   className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
                     i === currentIndex
-                      ? "bg-gradient-to-r from-cyan-500 to-teal-500 scale-125"
+                      ? "bg-linear-to-r from-cyan-500 to-teal-500 scale-125"
                       : "bg-gray-300 hover:bg-gray-400"
                   }`}
                 />
@@ -285,7 +285,7 @@ const Comments = () => {
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: 5, ease: "linear" }}
-            className="h-full bg-gradient-to-r from-cyan-400 to-teal-400"
+            className="h-full bg-linear-to-r from-cyan-400 to-teal-400"
           />
         </div>
       </motion.div>
