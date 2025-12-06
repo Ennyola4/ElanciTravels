@@ -70,13 +70,13 @@ export const travels = [
 
 export const comments = [
     {
-        name: "Kolade Ajayi",
+        name: "Kennedy Howe",
         image: "https://www.shutterstock.com/image-photo/handsome-blue-eyed-man-smiling-600nw-1054844918.jpg",
         desc: "Elanci Travels made my honeymoon in Bali absolutely perfect! Every detail was handled with care — from airport pickup to private tours. We didn’t have to worry about a thing.",
        
     },
     {
-        name: "Taiwo Agbelu",
+        name: "Sarah Watkins",
         image: "https://images.squarespace-cdn.com/content/v1/5349860de4b0da6fc9abbf4f/1538900898991-JM2Q75E0Q5F69XMOSPTU/Kelly+White+manager+of+Engagement+-+Canada",
         desc: "I’ve used many agencies before, but none compare to Elanci. The team understood exactly what I wanted for my solo trip to Kenya and exceeded my expectations.",
        
