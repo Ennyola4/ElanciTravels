@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { comments } from "../utils/Index";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
@@ -23,12 +23,12 @@ const Comments = () => {
     setCurrentIndex((prev) => (prev + 1) % comments.length);
   };
 
-  const handlePrev = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) =>
-      prev === 0 ? comments.length - 1 : prev - 1
-    );
-  };
+  // const handlePrev = () => {
+  //   setDirection(-1);
+  //   setCurrentIndex((prev) =>
+  //     prev === 0 ? comments.length - 1 : prev - 1
+  //   );
+  // };
 
   // ---- ANIMATION VARIANTS ----
   const slideVariants: Variants = {
@@ -144,7 +144,7 @@ const Comments = () => {
           <Quote className="absolute top-8 right-8 w-24 h-24 text-cyan-50 stroke-[0.5]" />
 
           {/* ==== SLIDE CONTAINER ==== */}
-          <div className="relative h-[400px] sm:h-[350px] overflow-hidden">
+          <div className="relative h-[500px] sm:h-[400px] overflow-hidden">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -227,46 +227,27 @@ const Comments = () => {
             </AnimatePresence>
           </div>
 
-          {/* ==== NAV BUTTONS ==== */}
-          <motion.button
-            onClick={handlePrev}
-            whileHover={{ scale: 1.1, x: -5 }}
-            whileTap={{ scale: 0.9 }}
-            className="absolute top-1/2 left-4 -translate-y-1/2 bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white p-3.5 rounded-full shadow-lg shadow-cyan-200 backdrop-blur-sm transition-all duration-300 z-10"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </motion.button>
-
-          <motion.button
-            onClick={handleNext}
-            whileHover={{ scale: 1.1, x: 5 }}
-            whileTap={{ scale: 0.9 }}
-            className="absolute top-1/2 right-4 -translate-y-1/2 bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white p-3.5 rounded-full shadow-lg shadow-cyan-200 backdrop-blur-sm transition-all duration-300 z-10"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </motion.button>
+          
 
           {/* ==== DOT INDICATORS ==== */}
-          <div className="flex justify-center mt-10 lg:mt-12 gap-3">
-            {comments.map((_, i) => (
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+            {comments.map((_, index) => (
               <motion.button
-                key={i}
+                key={index}
                 onClick={() => {
-                  setDirection(i > currentIndex ? 1 : -1);
-                  setCurrentIndex(i);
+                  if (index !== currentIndex) {
+                    setDirection(index > currentIndex ? 1 : -1);
+                    setCurrentIndex(index);
+                  }
                 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                className="focus:outline-none"
-              >
-                <div
-                  className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
-                    i === currentIndex
-                      ? "bg-linear-to-r from-cyan-500 to-teal-500 scale-125"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                />
-              </motion.button>
+                className={`w-3 h-3 rounded-full ${
+                  index === currentIndex
+                    ? "bg-linear-to-r from-cyan-500 to-teal-500"
+                    : "bg-gray-300"
+                }`}
+                whileHover={{ scale: 1.3 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              />
             ))}
           </div>
         </div>
