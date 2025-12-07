@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
 const images = [
-    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop",
+    "https://media.istockphoto.com/id/163031116/photo/air-stewardess.jpg?s=612x612&w=0&k=20&c=7WZ-DsSMLmzXneLT-0FFFOHRK9DyZvLYvC2vrcc5saU=",
+    "https://media.istockphoto.com/id/168580537/photo/beautiful-air-stewardess.jpg?s=612x612&w=0&k=20&c=Fd0IpTrj9Awj2pARECyWFsH8MXuuXb4910eKsZeHDXk=",
+    "https://worldaviationato.com/backend/wp-content/uploads/4-6-1024x538.jpg",
+    "https://imageio.forbes.com/blogs-images/laurabegleybloom/files/2016/06/Cara-King-on-the-King-Air1.jpg?height=759&width=700&fit=bounds",
+    "https://images.unsplash.com/photo-1615317779547-2078d82c549a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGxhbmV8ZW58MHx8MHx8fDA%3D",
+    "https://fitravel.com.ng/wp-content/uploads/2022/08/fitravel11-Recovered-370x370.png",
 ];
 
 const OurAbout = () => {
@@ -300,7 +300,7 @@ const OurAbout = () => {
                             <div className="w-full lg:w-1/2">
                                 <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden group">
                                     <motion.img
-                                        src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop"
+                                        src="https://media.istockphoto.com/id/1485094711/photo/woman-airport-and-passenger-assistant-with-passport-helping-traveler-for-check-in-at-terminal.jpg?s=612x612&w=0&k=20&c=v1bhmmxSKT4iRve6CNyX8Be26ClcHmqMcHAcjPkoeeU="
                                         alt="Our Mission"
                                         className="w-full h-full object-cover"
                                         whileHover={{ scale: 1.05 }}
@@ -377,7 +377,7 @@ const OurAbout = () => {
                             <div className="w-full lg:w-1/2">
                                 <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden group">
                                     <motion.img
-                                        src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop"
+                                        src="https://img.freepik.com/free-photo/airline-check-attendant-showing-direction-commuter-check-counter_107420-95790.jpg?semt=ais_hybrid&w=740&q=80"
                                         alt="Our Vision"
                                         className="w-full h-full object-cover"
                                         whileHover={{ scale: 1.05 }}
