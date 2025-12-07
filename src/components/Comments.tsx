@@ -220,14 +220,14 @@ const Comments = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-1">
                       {comments[currentIndex].name}
                     </h3>
-                   
+
                   </motion.div>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          
+
 
           {/* ==== DOT INDICATORS ==== */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
@@ -240,11 +240,10 @@ const Comments = () => {
                     setCurrentIndex(index);
                   }
                 }}
-                className={`w-3 h-3 rounded-full ${
-                  index === currentIndex
+                className={`w-3 h-3 rounded-full ${index === currentIndex
                     ? "bg-linear-to-r from-cyan-500 to-teal-500"
                     : "bg-gray-300"
-                }`}
+                  }`}
                 whileHover={{ scale: 1.3 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
