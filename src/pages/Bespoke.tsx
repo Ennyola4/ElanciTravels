@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
     Sparkles,
@@ -31,6 +31,10 @@ import {
 const Bespoke = () => {
     const [activeStep, setActiveStep] = useState(0);
     const [selectedInterest, setSelectedInterest] = useState<string[]>([]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
 
 
     const processSteps = [

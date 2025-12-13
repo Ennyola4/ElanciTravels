@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { 
-  Sparkles, 
-  Award, 
-  Users, 
-  Globe, 
-  Heart, 
+import {
+  Sparkles,
+  Award,
+  Users,
+  Globe,
+  Heart,
   Shield,
   Star,
   Target,
@@ -18,12 +18,13 @@ import {
   BookOpen,
   Camera
 } from "lucide-react";
+import { useEffect } from "react";
 
 const TheBrand = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
@@ -41,6 +42,11 @@ const TheBrand = () => {
       }
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
 
   const values = [
     {
@@ -197,7 +203,7 @@ const TheBrand = () => {
               <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-600 to-orange-600">Expectation</span>
             </h2>
             <p className="text-gray-600 text-xl max-w-4xl mx-auto leading-relaxed">
-              At Elanci, we believe travel is not merely about destinations, but about transformation. 
+              At Elanci, we believe travel is not merely about destinations, but about transformation.
               Each journey is an opportunity to rediscover, reinvent, and reconnect with what matters most.
             </p>
           </motion.div>
@@ -338,7 +344,7 @@ const TheBrand = () => {
                         <p className="text-gray-600">{milestone.description}</p>
                       </div>
                     </div>
-                    
+
                     {/* Timeline Dot */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white border-4 border-cyan-500 rounded-full" />
                   </motion.div>
@@ -394,7 +400,7 @@ const TheBrand = () => {
                     <div className="p-6">
                       <h4 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h4>
                       <p className="text-cyan-600 font-medium mb-4">{member.role}</p>
-                      
+
                       <div className="space-y-2">
                         {member.expertise.map((skill, skillIndex) => (
                           <div key={skillIndex} className="flex items-center gap-2">
@@ -475,10 +481,10 @@ const TheBrand = () => {
                   Become Part of Our Story
                 </h3>
                 <p className="text-gray-300 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                  Join the discerning travelers who trust Elanci to transform their travel dreams into reality. 
+                  Join the discerning travelers who trust Elanci to transform their travel dreams into reality.
                   Your extraordinary journey begins here.
                 </p>
-                
+
                 <div className="flex flex-wrap justify-center gap-6">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -488,7 +494,7 @@ const TheBrand = () => {
                     Begin Your Journey
                     <ChevronRight className="w-5 h-5" />
                   </motion.button>
-                  
+
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
