@@ -250,7 +250,7 @@ const Destination = () => {
                         <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-linear-to-r from-cyan-50 to-teal-50 rounded-full">
                             <div className="h-1 w-8 bg-linear-to-r from-cyan-500 to-teal-500 rounded-full" />
                             <span className="text-sm font-semibold text-cyan-700 uppercase tracking-widest">
-                                Exclusive Destinations
+                              Destination List
                             </span>
                             <div className="h-1 w-8 bg-linear-to-r from-emerald-500 to-cyan-500 rounded-full" />
                         </div>
