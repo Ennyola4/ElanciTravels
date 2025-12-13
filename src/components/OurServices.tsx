@@ -82,10 +82,10 @@ const OurServices = () => {
                                 What We Offer
                             </span>
                         </div>
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                             Our <span className="bg-linear-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">Services</span>
                         </h1>
-                        <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-gray-500 text-xl sm:text-xl max-w-3xl mx-auto leading-relaxed">
                             Explore the world with our comprehensive travel services designed
                             to make your journey unforgettable.
                         </p>

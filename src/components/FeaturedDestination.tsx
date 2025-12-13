@@ -46,7 +46,7 @@ const FeaturedDestination = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-3xl md:text-6xl lg:text-7xl font-bold mb-6"
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6"
                     >
                         <span className="bg-linear-to-r from-cyan-700 via-teal-600 to-emerald-600 bg-clip-text text-transparent">
                             Featured

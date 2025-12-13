@@ -111,7 +111,7 @@ const Comments = () => {
           </span>
           <div className="h-1 w-12 bg-cyan-500 rounded-full" />
         </div>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-5">
+        <h1 className="text-2xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight mb-5">
           Voices From Our{" "}
           <span className="bg-linear-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">
             Community

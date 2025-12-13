@@ -83,10 +83,10 @@ const WhyChooseElanci = () => {
                             Why Choose Us
                         </span>
                     </div>
-                    <h2 className="text-2xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-gray-900 mb-6">
                         The <span className="bg-linear-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">Elanci</span> Difference
                     </h2>
-                    <p className="text-gray-600 text-sm sm:text-xl max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-gray-600 text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed">
                         Experience travel like never before with our commitment to excellence, personalized service, and unforgettable adventures.
                     </p>
                 </motion.div>
