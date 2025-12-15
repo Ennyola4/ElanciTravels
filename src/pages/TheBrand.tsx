@@ -12,7 +12,6 @@ import {
   Clock,
   MapPin,
   ChevronRight,
-  Calendar,
   CheckCircle,
   Zap,
   BookOpen,
@@ -73,15 +72,6 @@ const TheBrand = () => {
       description: "Understanding individual desires to create deeply personal and meaningful travel experiences.",
       color: "from-purple-500 to-violet-500"
     }
-  ];
-
-  const milestones = [
-    { year: "2008", title: "Foundation", description: "Elanci founded with a vision for luxury travel" },
-    { year: "2012", title: "Global Expansion", description: "Established offices in 3 continents" },
-    { year: "2015", title: "Award Recognition", description: "Won 'Best Luxury Travel Company' award" },
-    { year: "2018", title: "Digital Innovation", description: "Launched bespoke digital concierge platform" },
-    { year: "2021", title: "Sustainability", description: "Achieved carbon-neutral certification" },
-    { year: "2023", title: "Exclusive Access", description: "Partnered with 500+ luxury properties" }
   ];
 
   const team = [
@@ -302,56 +292,7 @@ const TheBrand = () => {
             </motion.div>
           </div>
 
-          {/* Timeline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mb-20"
-          >
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-linear-to-r from-amber-50 to-orange-50 rounded-full">
-                <Calendar className="w-5 h-5 text-amber-600" />
-                <span className="text-sm font-semibold text-amber-700 uppercase tracking-widest">
-                  Our Journey
-                </span>
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Milestones of Excellence</h3>
-            </div>
-
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-linear-to-b from-cyan-500 via-teal-500 to-amber-500" />
-
-              {/* Timeline Items */}
-              <div className="space-y-12">
-                {milestones.map((milestone, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
-                  >
-                    <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'}`}>
-                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-                        <div className="text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-teal-600 mb-2">
-                          {milestone.year}
-                        </div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h4>
-                        <p className="text-gray-600">{milestone.description}</p>
-                      </div>
-                    </div>
-
-                    {/* Timeline Dot */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white border-4 border-cyan-500 rounded-full" />
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+ 
 
           {/* Leadership Team */}
           <motion.div

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
-  User, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Send,
+  User,
   MessageSquare,
   Globe,
   CheckCircle,
@@ -48,7 +48,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
@@ -61,7 +61,7 @@ const Contact = () => {
         message: "",
         travelDate: ""
       });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
@@ -172,7 +172,7 @@ const Contact = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-10"
             >
-              Connect with our luxury travel experts to craft your perfect escape. 
+              Connect with our luxury travel experts to craft your perfect escape.
               Every inquiry receives personalized attention from our dedicated concierge team.
             </motion.p>
           </div>
@@ -443,7 +443,7 @@ const Contact = () => {
                       className={`flex items-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${isSubmitting
                         ? 'bg-gray-300 cursor-not-allowed'
                         : 'bg-linear-to-r from-cyan-600 to-teal-500 text-white hover:shadow-xl hover:shadow-cyan-500/25'
-                      }`}
+                        }`}
                     >
                       {isSubmitting ? (
                         <>
@@ -508,13 +508,13 @@ const Contact = () => {
               </span>
               <div className="h-1 w-8 bg-linear-to-r from-emerald-500 to-cyan-500 rounded-full" />
             </div>
-            
+
             <div className="bg-white rounded-3xl p-12 shadow-2xl shadow-gray-200/50 border border-gray-100">
               <Award className="w-16 h-16 text-cyan-500 mx-auto mb-6" />
               <h3 className="text-4xl font-bold text-gray-900 mb-6">
                 Experience the Elanci Difference
               </h3>
-              
+
               <div className="grid md:grid-cols-3 gap-8 mb-10">
                 {[
                   {
