@@ -1,18 +1,11 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Mail, Phone, MapPin, Send, Plane, Globe2, Clock, Globe, MessageSquare, User, Calendar } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Plane, Globe2, Clock, Globe, MessageSquare } from "lucide-react";
 
 const OurContact = () => {
     const text = "Let's Get in Touch";
     const [key, setKey] = useState(0);
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        date: "",
-        message: "",
-        travelType: ""
-    });
+   ;
 
     // Re-trigger animation every 8 seconds
     useEffect(() => {
@@ -22,31 +15,8 @@ const OurContact = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Handle form submission here
-        console.log('Form submitted:', formData);
-    };
-
-    const travelTypes = [
-        "Beach Vacation",
-        "Cultural Tour",
-        "Adventure Trip",
-        "Luxury Retreat",
-        "Family Holiday",
-        "Business Travel",
-        "Honeymoon",
-        "Other"
-    ];
-
+ 
+ 
     return (
         <div className="min-h-screen bg-linear-to-b from-gray-50 to-white">
             {/* Hero Section */}
@@ -278,146 +248,7 @@ const OurContact = () => {
             </section>
 
             {/* Contact Form */}
-            <section className="relative py-20 bg-linear-to-b from-white to-gray-50/50">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-12"
-                    >
-                      
-                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-                            Send Us a <span className="bg-linear-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">Message</span>
-                        </h2>
-                        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                            Fill out the form below and our travel experts will get back to you with customized options
-                        </p>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-white rounded-3xl shadow-2xl shadow-gray-200/50 border border-gray-100 overflow-hidden"
-                    >
-                        <form onSubmit={handleSubmit} className="p-8 lg:p-12">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                                <div>
-                                    <label className="flex items-center gap-2 text-gray-700 font-medium mb-3">
-                                        <User className="w-4 h-4" />
-                                        Full Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleInputChange}
-                                        placeholder="Enter your name"
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                                        required
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="flex items-center gap-2 text-gray-700 font-medium mb-3">
-                                        <Mail className="w-4 h-4" />
-                                        Email Address
-                                    </label>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        placeholder="Enter your email"
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                                        required
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="flex items-center gap-2 text-gray-700 font-medium mb-3">
-                                        <Phone className="w-4 h-4" />
-                                        Phone Number
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleInputChange}
-                                        placeholder="Enter your phone number"
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="flex items-center gap-2 text-gray-700 font-medium mb-3">
-                                        <Calendar className="w-4 h-4" />
-                                        Preferred Travel Date
-                                    </label>
-                                    <input
-                                        type="date"
-                                        name="date"
-                                        value={formData.date}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="mb-8">
-                                <label className="block text-gray-700 font-medium mb-3">
-                                    Type of Travel Experience
-                                </label>
-                                <select
-                                    name="travelType"
-                                    value={formData.travelType}
-                                    onChange={handleInputChange}
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                >
-                                    <option value="">Select a travel type</option>
-                                    {travelTypes.map(type => (
-                                        <option key={type} value={type}>{type}</option>
-                                    ))}
-                                </select>
-                            </div>
-
-                            <div className="mb-8">
-                                <label className="flex items-center gap-2 text-gray-700 font-medium mb-3">
-                                    <MessageSquare className="w-4 h-4" />
-                                    Your Message
-                                </label>
-                                <textarea
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleInputChange}
-                                    rows={5}
-                                    placeholder="Tell us about your dream vacation..."
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                                    required
-                                />
-                            </div>
-
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                type="submit"
-                                className="group w-full flex items-center justify-center gap-3 px-8 py-4 bg-linear-to-r from-cyan-500 to-teal-400 text-white font-semibold rounded-full shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/35 transition-all duration-300"
-                            >
-                                <Send className="w-5 h-5" />
-                                <span>Send Message</span>
-                                <motion.div
-                                    animate={{ x: [0, 5, 0] }}
-                                    transition={{ duration: 1.5, repeat: Infinity }}
-                                    className="w-4 h-4"
-                                >
-                                    <Plane className="w-4 h-4 transform rotate-45" />
-                                </motion.div>
-                            </motion.button>
-                        </form>
-                    </motion.div>
-                </div>
-            </section>
+         
 
             {/* Map Section */}
             <section className="relative h-[500px]">
