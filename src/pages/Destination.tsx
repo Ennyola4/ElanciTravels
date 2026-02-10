@@ -1,6 +1,6 @@
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Globe, MapPin, Star, ChevronRight, Search, Filter, TrendingUp, ChevronLeft, ChevronDown, Grid, List } from "lucide-react";
+import {  MapPin, Star, ChevronRight, Search, Filter, TrendingUp, ChevronLeft, ChevronDown, Grid, List } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 const Destination = () => {
@@ -130,17 +130,6 @@ const Destination = () => {
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentDestinations = filteredDestinations.slice(indexOfFirstItem, indexOfLastItem);
 
-    const fadeInUpVariants: Variants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1]
-            }
-        }
-    };
 
     const handlePageChange = (pageNumber: number) => {
         setCurrentPage(pageNumber);
@@ -172,17 +161,6 @@ const Destination = () => {
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="text-center px-4 max-w-6xl">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="inline-flex items-center gap-2 mb-8 px-6 py-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10"
-                        >
-                            <Globe className="w-5 h-5 text-cyan-300" />
-                            <span className="text-sm font-semibold text-cyan-300 uppercase tracking-widest">
-                                Global Portfolio
-                            </span>
-                        </motion.div>
 
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
@@ -190,7 +168,7 @@ const Destination = () => {
                             transition={{ duration: 1, delay: 0.4 }}
                             className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
                         >
-                            Curated <span className="bg-linear-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Global</span> Destinations
+                            Explore <span className="bg-linear-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">La</span> Vie
                         </motion.h1>
 
                         <motion.p
@@ -199,28 +177,9 @@ const Destination = () => {
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10"
                         >
-                            Explore our exclusive collection of 80+ destinations worldwide, carefully selected for the discerning traveler seeking unparalleled experiences.
+                            Every destination in our unparalleled portfolio is chosen with care, intention, and a sense of refined taste.
+                            We highlight not entire countries, but the cities within them that truly embody luxury, culture, and atmosphere.
                         </motion.p>
-
-                        {/* Quick Stats */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.8 }}
-                            className="flex flex-wrap justify-center gap-8"
-                        >
-                            {[
-                                { value: "80+", label: "Destinations" },
-                                { value: "7", label: "Continents" },
-                                { value: "⭐ 4.9", label: "Rating" },
-                                { value: "∞", label: "Experiences" }
-                            ].map((stat, index) => (
-                                <div key={index} className="text-center">
-                                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                                    <div className="text-sm text-gray-400 tracking-wider">{stat.label}</div>
-                                </div>
-                            ))}
-                        </motion.div>
                     </div>
                 </div>
 
@@ -239,29 +198,6 @@ const Destination = () => {
             {/* Destinations Section */}
             <section className="relative py-20 px-4">
                 <div className="max-w-7xl mx-auto">
-                    {/* Header */}
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeInUpVariants}
-                        className="mb-16"
-                    >
-                        <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-linear-to-r from-cyan-50 to-teal-50 rounded-full">
-                            <div className="h-1 w-8 bg-linear-to-r from-cyan-500 to-teal-500 rounded-full" />
-                            <span className="text-sm font-semibold text-cyan-700 uppercase tracking-widest">
-                              Destination List
-                            </span>
-                            <div className="h-1 w-8 bg-linear-to-r from-emerald-500 to-cyan-500 rounded-full" />
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                            Explore <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-teal-600">La</span> vie
-                        </h2>
-                        <p className="text-gray-600 text-lg max-w-3xl">
-                            Every destination in our unparalleled portfolio is chosen with care, intention, and a sense of refined taste.
-                            We highlight not entire countries, but the cities within them that truly embody luxury, culture, and atmosphere.
-                        </p>
-                    </motion.div>
 
                     {/* Search and Controls */}
                     <motion.div
