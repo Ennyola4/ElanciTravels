@@ -340,9 +340,8 @@ const OurAbout = () => {
                             <div className="w-full lg:w-1/2 lg:pl-10">
                                 <div className="space-y-6">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-linear-to-r from-cyan-50 to-teal-50 rounded-xl">
-                                            <Compass className="w-8 h-8 text-cyan-600" />
-                                        </div>
+
+                                        <Compass className="w-8 h-8 text-cyan-600" />
                                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
                                             Our Mission
                                         </h2>
@@ -358,7 +357,7 @@ const OurAbout = () => {
                                         </p>
                                     </div>
 
-                                    <div className="bg-linear-to-r from-cyan-50 to-teal-50 rounded-2xl p-6 border border-cyan-100">
+                                    <div className="bg-linear-to-r from-cyan-50 to-teal-50 rounded-2xl p-6 border border-cyan-100 shadow-sm">
                                         <p className="text-gray-700 italic leading-relaxed">
                                             Through sustainable and responsible tourism practices, we aim to foster meaningful connections between travelers and the
                                             destinations they explore, ensuring every journey leaves a positive impact.
@@ -417,9 +416,8 @@ const OurAbout = () => {
                             <div className="w-full lg:w-1/2 lg:pr-10">
                                 <div className="space-y-6">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-linear-to-r from-teal-50 to-emerald-50 rounded-xl">
-                                            <Globe2 className="w-8 h-8 text-teal-600" />
-                                        </div>
+
+                                        <Globe2 className="w-8 h-8 text-teal-600" />
                                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
                                             Our Vision
                                         </h2>
@@ -434,7 +432,7 @@ const OurAbout = () => {
                                         </p>
                                     </div>
 
-                                    <div className="bg-linear-to-r from-teal-50 to-emerald-50 rounded-2xl p-6 border border-teal-100">
+                                    <div className="bg-linear-to-r from-teal-50 to-emerald-50 rounded-2xl p-6 border border-teal-100 shadow-sm">
                                         <p className="text-gray-700 italic leading-relaxed">
                                             By continuously evolving and embracing new technologies, we aim to set new
                                             standards in the travel industry while promoting cultural understanding and

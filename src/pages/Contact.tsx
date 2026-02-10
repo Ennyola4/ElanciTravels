@@ -440,14 +440,14 @@ const Contact = () => {
                       disabled={isSubmitting}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`flex items-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${isSubmitting
+                      className={`flex items-center gap-3 text-center w-fit px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${isSubmitting
                         ? 'bg-gray-300 cursor-not-allowed'
                         : 'bg-linear-to-r from-cyan-600 to-teal-500 text-white hover:shadow-xl hover:shadow-cyan-500/25'
                         }`}
                     >
                       {isSubmitting ? (
                         <>
-                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          <div className="w-5 h-5 text-center border-2 border-white border-t-transparent rounded-full animate-spin" />
                           Sending...
                         </>
                       ) : (
@@ -457,10 +457,6 @@ const Contact = () => {
                         </>
                       )}
                     </motion.button>
-
-                    <p className="text-sm text-gray-500">
-                      By submitting, you agree to our privacy policy and terms of service.
-                    </p>
                   </div>
                 </form>
 

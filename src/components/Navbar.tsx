@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Plane, Phone, Mail, MapPin, User, Search } from "lucide-react";
+import { Menu, X, Plane, Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 
@@ -7,6 +7,18 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const [quote, setQuote] = useState<string | null>(null)
+
+
+  const quotes = [
+    "Travel is the only thing you buy that makes you richer.",
+    "Collect memories, not things.",
+    "Life is short, the world is wide.",
+    "Adventure awaits—go find it.",
+    "Travel far enough, you meet yourself.",
+    "Luxury is found in unforgettable journeys."
+  ]
+
 
   const navLinks = [
     {
@@ -22,10 +34,10 @@ const Navbar = () => {
       path: "/bespoke",
       label: "Bespoke"
     },
-    {
-      path: "/services",
-      label : "Our Services"
-    },
+    // {
+    //   path: "/services",
+    //   label : "Our Services"
+    // },
     {
       path: "/thebrand",
       label: "The Brand"
@@ -50,6 +62,18 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+
+
+  const getRandomQuote = () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length)
+    setQuote(quotes[randomIndex])
+
+    // auto-hide after 4s
+    setTimeout(() => setQuote(null), 4000)
+  }
+
+
 
   return (
     <>
@@ -118,34 +142,32 @@ const Navbar = () => {
               })}
             </div>
 
-            {/* Right Side Actions */}
+            {/* get randome quotes about traveling */}
             <div className="hidden lg:flex items-center gap-4">
-              {/* Search Button */}
-              <button className={`p-2 rounded-full transition-all duration-300 ${isScrolled
-                ? "text-gray-600 hover:text-cyan-600 hover:bg-linear-to-r hover:from-cyan-50/50 hover:to-teal-50/50"
-                : "text-gray-200 hover:text-white hover:bg-white/10"
-                }`}>
-                <Search className="w-5 h-5" />
-              </button>
-
-              {/* User Account */}
-              <button className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${isScrolled
-                ? "text-gray-700 hover:text-cyan-600 hover:bg-linear-to-r hover:from-cyan-50/50 hover:to-teal-50/50"
-                : "text-gray-200 hover:text-white hover:bg-white/10"
-                }`}>
-                <User className="w-5 h-5" />
-                <span className="text-sm font-medium">Account</span>
-              </button>
-
               {/* CTA Button */}
               <motion.button
+                onClick={getRandomQuote}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 bg-linear-to-r from-cyan-500 to-teal-400 text-white font-semibold rounded-full shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/35 transition-all duration-300"
+                className="px-4 py-2 cursor-pointer bg-linear-to-r from-cyan-500 to-teal-400 text-white font-semibold rounded-full shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/35 transition-all duration-300"
               >
                 Get Quote
               </motion.button>
+
             </div>
+            {quote && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute top-24 right-6 max-w-xs bg-white text-gray-800 px-5 py-3 rounded-xl shadow-xl border border-gray-100 hidden lg:block"
+              >
+                <p className="text-sm font-medium leading-relaxed">
+                  “{quote}”
+                </p>
+              </motion.div>
+            )}
+
 
             {/* Mobile Menu Button */}
             <motion.button
@@ -218,6 +240,8 @@ const Navbar = () => {
           </motion.div>
         )}
       </nav>
+
+
 
       {/* Spacer for fixed navbar */}
       <div className="h-20 lg:h-18" />

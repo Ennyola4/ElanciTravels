@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Play, Pause, MapPin, Calendar, Users } from "lucide-react";
+import { ChevronLeft, ChevronRight} from "lucide-react";
 import type { Variants } from "framer-motion";
 
 const carouselData = [
@@ -48,19 +48,19 @@ const carouselData = [
 
 const HomeCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  // const [isPlaying, setIsPlaying] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Auto play functionality
-  useEffect(() => {
-    if (!isPlaying) return;
+  // // Auto play functionality
+  // useEffect(() => {
+  //   if (!isPlaying) return;
 
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % carouselData.length);
-    }, 15000);
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prev) => (prev + 1) % carouselData.length);
+  //   }, 15000);
 
-    return () => clearInterval(interval);
-  }, [isPlaying]);
+  //   return () => clearInterval(interval);
+  // }, [isPlaying]);
 
   // Preload images
   useEffect(() => {
@@ -126,6 +126,15 @@ const HomeCarousel = () => {
   //   }
   // };
 
+  // set loading overlay to 3 seconds
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }, []);
+
   const overlayVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -138,13 +147,13 @@ const HomeCarousel = () => {
 
   return (
     <div className="relative w-full h-screen min-h-[700px] overflow-hidden">
-      {/* Loading overlay */}
+      {/* Loading overlay  */}
       {isLoading && (
         <div className="absolute inset-0 bg-linear-to-br from-gray-900 to-cyan-900 z-50 flex items-center justify-center">
           <div className="relative">
             <div className="w-20 h-20 border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white font-semibold">Loading...</span>
+              <span className="text-white font-semibold">Loading</span>
             </div>
           </div>
         </div>
@@ -189,7 +198,7 @@ const HomeCarousel = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="space-y-4 lg:space-y-6 max-w-3xl"
+              className="space-y-2 lg:space-y-3 max-w-3xl"
             >
               {/* Badge */}
               <motion.div
@@ -209,10 +218,10 @@ const HomeCarousel = () => {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
-                className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold leading-tight"
+                className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight"
               >
                 {currentSlide.title}
-                <span className="block text-3xl sm:text-4xl lg:text-5xl font-medium text-cyan-300 mt-2">
+                <span className="block text-3xl sm:text-4xl lg:text-5xl font-medium text-cyan-300">
                   {currentSlide.subtitle}
                 </span>
               </motion.h1>
@@ -226,70 +235,6 @@ const HomeCarousel = () => {
               >
                 {currentSlide.description}
               </motion.p>
-
-              {/* Details */}
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-                className="flex flex-wrap gap-6 pt-4"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-linear-to-r from-cyan-500/20 to-teal-500/20 rounded-lg">
-                    <Calendar className="w-5 h-5 text-cyan-300" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-300">Duration</div>
-                    <div className="font-semibold">{currentSlide.duration}</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-linear-to-r from-cyan-500/20 to-teal-500/20 rounded-lg">
-                    <MapPin className="w-5 h-5 text-cyan-300" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-300">Best Season</div>
-                    <div className="font-semibold">{currentSlide.season}</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-linear-to-r from-cyan-500/20 to-teal-500/20 rounded-lg">
-                    <Users className="w-5 h-5 text-cyan-300" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-300">Group Size</div>
-                    <div className="font-semibold">{currentSlide.travelers}</div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* CTA Buttons */}
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.8, duration: 0.8 }}
-                className="flex flex-wrap gap-4 pt-8"
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                  className="px-8 py-4 bg-linear-to-r from-cyan-500 to-teal-400 text-white font-semibold rounded-full shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/35 transition-all duration-300"
-                >
-                  Explore This Journey
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
-                  View All Tours
-                </motion.button>
-              </motion.div>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -321,7 +266,7 @@ const HomeCarousel = () => {
         </div>
 
         {/* Progress Bar */}
-        <div className="hidden lg:block w-32 h-1 bg-white/30 rounded-full overflow-hidden">
+        {/* <div className="hidden lg:block w-32 h-1 bg-white/30 rounded-full overflow-hidden">
           <motion.div
             key={currentIndex}
             initial={{ width: "0%" }}
@@ -329,10 +274,10 @@ const HomeCarousel = () => {
             transition={{ duration: 15, ease: "linear" }}
             className="h-full bg-linear-to-r from-cyan-400 to-teal-400"
           />
-        </div>
+        </div> */}
 
         {/* Play/Pause Button */}
-        <motion.button
+        {/* <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsPlaying(!isPlaying)}
@@ -344,7 +289,7 @@ const HomeCarousel = () => {
           ) : (
             <Play className="w-5 h-5 text-white" />
           )}
-        </motion.button>
+        </motion.button> */}
       </div>
 
       {/* Navigation Arrows */}

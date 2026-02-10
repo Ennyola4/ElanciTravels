@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { featuredDestination } from "../utils/Index";
-import { ChevronsRight, Plane, MapPin, Star, Globe } from "lucide-react";
+import { ChevronsRight, MapPin, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const FeaturedDestination = () => {
@@ -33,11 +33,11 @@ const FeaturedDestination = () => {
                 >
                     {/* Subtle label */}
                     <div className="inline-flex items-center gap-2 mb-4">
-                        <Globe className="w-5 h-5 text-cyan-600" />
+                        
                         <span className="text-sm font-semibold text-cyan-600 uppercase tracking-wider">
                             Explore The World
                         </span>
-                        <Globe className="w-5 h-5 text-cyan-600" />
+                        
                     </div>
 
                     {/* Main title with gradient */}
@@ -171,23 +171,6 @@ const FeaturedDestination = () => {
                                                     {tag}
                                                 </motion.span>
                                             ))}
-                                        </div>
-
-                                        {/* Footer */}
-                                        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                                            <motion.div
-                                                whileHover={{ x: 5 }}
-                                                className="flex items-center gap-2 text-cyan-600 font-semibold text-sm cursor-pointer"
-                                            >
-                                                <span>Explore More</span>
-                                                <ChevronsRight className="w-4 h-4" />
-                                            </motion.div>
-                                            <motion.div
-                                                animate={{ rotate: [0, 15, 0] }}
-                                                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                                            >
-                                                <Plane className="w-5 h-5 text-cyan-500" />
-                                            </motion.div>
                                         </div>
                                     </div>
                                 </div>

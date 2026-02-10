@@ -3,8 +3,10 @@ import { services, travels } from "../utils/Index";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import type { Variants } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const OurServices = () => {
+    const navigate = useNavigate();
     useEffect(() => {
         // Initialize any additional animations if needed
     }, []);
@@ -296,6 +298,9 @@ const OurServices = () => {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     transition={{ type: "spring", stiffness: 400 }}
+                                    onClick={()=>{
+                                        navigate("/contact");
+                                    }}
                                     className="px-8 py-3 bg-linear-to-r from-cyan-500 to-teal-400 text-white font-semibold rounded-full shadow-lg shadow-cyan-500/25"
                                 >
                                     Start Planning

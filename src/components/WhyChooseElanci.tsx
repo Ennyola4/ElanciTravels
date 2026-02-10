@@ -1,8 +1,10 @@
 import { whyChooseUs } from "../utils/Index";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const WhyChooseElanci = () => {
+    const navigate = useNavigate();
     // Animation variants with proper typing
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -192,6 +194,9 @@ const WhyChooseElanci = () => {
                                 Join thousands of satisfied travelers who have discovered the world with Elanci.
                             </p>
                             <motion.button
+                                onClick={()=>{
+                                    navigate("/contact")
+                                }}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 transition={{ type: "spring", stiffness: 400 }}

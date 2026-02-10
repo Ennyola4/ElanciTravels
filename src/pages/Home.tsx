@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import Comments from "../components/Comments"
 import HomeCarousel from "../components/HomeCarousel"
-import Intro from "../components/Intro"
+// import Intro from "../components/Intro"
 import OurAbout from "../components/OurAbout"
 import OurContact from "../components/OurContact"
 import OurServices from "../components/OurServices"
@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <div>
             <HomeCarousel />
-            <Intro/>
+            {/* <Intro/> */}
             <OurServices/>
             <FeaturedDestination/>
             <OurAbout/>

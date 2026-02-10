@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Mail, Phone, MapPin, Send, Plane, Globe2, Clock, Globe, MessageSquare, User, Calendar, Sparkles } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Plane, Globe2, Clock, Globe, MessageSquare, User, Calendar } from "lucide-react";
 
 const OurContact = () => {
     const text = "Let's Get in Touch";
@@ -286,12 +286,7 @@ const OurContact = () => {
                         viewport={{ once: true }}
                         className="text-center mb-12"
                     >
-                        <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-linear-to-r from-cyan-50 to-teal-50 rounded-full border border-cyan-100">
-                            <Sparkles className="w-4 h-4 text-cyan-600" />
-                            <span className="text-sm font-semibold text-cyan-600 uppercase tracking-wider">
-                                Get a Personalized Quote
-                            </span>
-                        </div>
+                      
                         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                             Send Us a <span className="bg-linear-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">Message</span>
                         </h2>
