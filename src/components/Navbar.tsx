@@ -149,7 +149,7 @@ const Navbar = () => {
                 onClick={getRandomQuote}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 cursor-pointer bg-linear-to-r from-cyan-500 to-teal-400 text-white font-semibold rounded-full shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/35 transition-all duration-300"
+                className="px-3 py-2 cursor-pointer text-white text-sm  rounded-full border border-gray-100 transition-all duration-300"
               >
                 Get Quote
               </motion.button>
