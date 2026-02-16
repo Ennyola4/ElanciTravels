@@ -111,7 +111,7 @@ const TheBrand = () => {
   return (
     <div className="min-h-screen bg-linear-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="relative h-[80vh] min-h-[700px] overflow-hidden">
+      <div className="relative h-[50vh] min-h-[400px] overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <motion.div
@@ -411,7 +411,7 @@ const TheBrand = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-gray-900 to-gray-800">
-              <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-0 left-0 w-64 h-64 bg-cyan-500 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-500 rounded-full blur-3xl" />
               </div>

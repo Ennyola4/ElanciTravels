@@ -139,7 +139,7 @@ const Destination = () => {
     return (
         <div className="min-h-screen bg-linear-to-b from-gray-50 to-white">
             {/* Hero Section */}
-            <div className="relative h-[65vh] min-h-[550px] w-full overflow-hidden">
+            <div className="relative h-[55vh] min-h-[50px] w-full overflow-hidden">
                 {/* Background Image with Gradient */}
                 <div className="absolute inset-0">
                     <motion.div
@@ -148,7 +148,7 @@ const Destination = () => {
                         transition={{ duration: 1.8 }}
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                         style={{
-                            backgroundImage: "url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2135&auto=format&fit=crop')",
+                            backgroundImage: "url('https://img.freepik.com/free-photo/travel-items-table_23-2147732586.jpg?semt=ais_user_personalization&w=740&q=80')",
                         }}
                     />
                     <div className="absolute inset-0 bg-linear-to-b from-gray-900/90 via-gray-900/50 to-gray-900/20" />
@@ -521,7 +521,7 @@ const Destination = () => {
                         className="mt-20"
                     >
                         <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-gray-900 to-gray-800">
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2135&auto=format&fit=crop')] opacity-10 bg-cover bg-center" />
+                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2135&auto=format&fit=crop')] opacity-20 bg-cover bg-center" />
                             <div className="relative z-10 px-8 py-12 text-center">
                                 <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
                                 <h3 className="text-3xl font-bold text-white mb-4">

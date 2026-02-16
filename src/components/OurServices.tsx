@@ -1,4 +1,4 @@
-import { ChevronsRight, Sparkles, Globe, Shield, Headphones, Calendar } from "lucide-react";
+import {  Sparkles, Globe, Shield, Headphones, Calendar } from "lucide-react";
 import { services, travels } from "../utils/Index";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -132,17 +132,6 @@ const OurServices = () => {
                                         <p className="text-gray-600 mb-6 leading-relaxed">
                                             {service.description}
                                         </p>
-
-                                        {/* Button */}
-                                        <motion.button
-                                            whileHover={{ x: 5 }}
-                                            transition={{ type: "spring", stiffness: 400 }}
-                                            className="group flex items-center gap-2 text-cyan-600 font-semibold text-sm"
-                                        >
-                                            <span>Explore More</span>
-                                            <ChevronsRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                        </motion.button>
-
                                         {/* Hover effect */}
                                         <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                                     </div>
@@ -260,15 +249,7 @@ const OurServices = () => {
                                             {travel.description}
                                         </p>
 
-                                        {/* Read more indicator */}
-                                        <motion.div
-                                            whileHover={{ x: 5 }}
-                                            transition={{ type: "spring", stiffness: 400 }}
-                                            className="flex items-center gap-2 text-cyan-300 font-medium text-sm cursor-pointer group"
-                                        >
-                                            <span>Discover Experience</span>
-                                            <ChevronsRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                        </motion.div>
+                                        
                                     </div>
 
                                     {/* Hover glow effect */}

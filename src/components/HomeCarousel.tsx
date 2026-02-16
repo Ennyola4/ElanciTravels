@@ -12,7 +12,7 @@ const HomeCarousel = () => {
     const img = new Image();
     img.src = backgroundImage;
     img.onload = () => {
-      setTimeout(() => setIsLoading(false), 3000);
+      setTimeout(() => setIsLoading(false), 2000);
     };
   }, []);
 

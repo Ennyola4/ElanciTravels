@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
     Sparkles,
@@ -6,94 +6,23 @@ import {
     MapPin,
     Calendar,
     Users,
-    Heart,
+
     Shield,
     CheckCircle,
     Zap,
     ChevronRight,
-    Globe,
+
     Award,
     Headphones,
     Wallet,
     Lock,
-    Moon,
-    Sun,
-    Camera,
-    ChefHat,
-    Wine,
-    Music,
-    Palette,
-    BookOpen,
-    Target,
-    Compass
+
 } from 'lucide-react';
 
 const Bespoke = () => {
-    const [activeStep, setActiveStep] = useState(0);
-    const [selectedInterest, setSelectedInterest] = useState<string[]>([]);
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
-
-
-
-    const processSteps = [
-        {
-            step: 1,
-            title: "Discovery Call",
-            description: "Share your travel dreams, preferences, and aspirations with our expert concierge.",
-            icon: Headphones,
-            duration: "60 min",
-            color: "from-cyan-500 to-teal-400"
-        },
-        {
-            step: 2,
-            title: "Vision Mapping",
-            description: "We analyze your desires to create a personalized travel blueprint.",
-            icon: Compass,
-            duration: "3-5 days",
-            color: "from-purple-500 to-pink-500"
-        },
-        {
-            step: 3,
-            title: "Curated Proposal",
-            description: "Receive a bespoke itinerary with exclusive experiences and accommodations.",
-            icon: BookOpen,
-            duration: "7-10 days",
-            color: "from-amber-500 to-orange-500"
-        },
-        {
-            step: 4,
-            title: "Final Refinement",
-            description: "We fine-tune every detail until it perfectly matches your vision.",
-            icon: Target,
-            duration: "2-3 days",
-            color: "from-emerald-500 to-green-500"
-        },
-        {
-            step: 5,
-            title: "Journey Execution",
-            description: "Your dedicated concierge manages everything from start to finish.",
-            icon: Sparkles,
-            duration: "Ongoing",
-            color: "from-violet-500 to-blue-500"
-        }
-    ];
-
-    const interests = [
-        { icon: Wine, label: "Wine & Dining", category: "culinary" },
-        { icon: ChefHat, label: "Michelin Experiences", category: "culinary" },
-        { icon: Camera, label: "Photography Tours", category: "culture" },
-        { icon: Palette, label: "Art & Architecture", category: "culture" },
-        { icon: Music, label: "Music & Festivals", category: "entertainment" },
-        { icon: Moon, label: "Wellness & Spa", category: "wellness" },
-        { icon: Sun, label: "Adventure Sports", category: "adventure" },
-        { icon: Globe, label: "Cultural Immersion", category: "culture" },
-        { icon: Star, label: "Luxury Shopping", category: "luxury" },
-        { icon: Users, label: "Family Activities", category: "family" },
-        { icon: Heart, label: "Romantic Getaways", category: "romance" },
-        { icon: Shield, label: "Private Security", category: "safety" }
-    ];
 
     const testimonials = [
         {
@@ -154,18 +83,12 @@ const Bespoke = () => {
         }
     ];
 
-    const toggleInterest = (interest: string) => {
-        if (selectedInterest.includes(interest)) {
-            setSelectedInterest(selectedInterest.filter(i => i !== interest));
-        } else {
-            setSelectedInterest([...selectedInterest, interest]);
-        }
-    };
+
 
     return (
         <div className="min-h-screen bg-linear-to-b from-gray-50 to-white">
             {/* Hero Section */}
-            <div className="relative h-[85vh] min-h-[700px] overflow-hidden">
+            <div className="relative h-[55vh] min-h-[400px] overflow-hidden">
                 {/* Background */}
                 <div className="absolute inset-0">
                     <motion.div
@@ -216,26 +139,6 @@ const Bespoke = () => {
                         >
                             Where every journey is a unique masterpiece, meticulously crafted around your deepest desires and wildest dreams.
                         </motion.p>
-
-                        {/* Stats */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 1.2 }}
-                            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
-                        >
-                            {[
-                                { value: "100%", label: "Custom Itineraries" },
-                                { value: "24/7", label: "Dedicated Concierge" },
-                                { value: "0", label: "Cookie-Cutter Trips" },
-                                { value: "∞", label: "Possibilities" }
-                            ].map((stat, index) => (
-                                <div key={index} className="text-center">
-                                    <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                                    <div className="text-sm text-gray-300 tracking-wider">{stat.label}</div>
-                                </div>
-                            ))}
-                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -265,168 +168,9 @@ const Bespoke = () => {
                         </p>
                     </motion.div>
 
-                    {/* Process Steps */}
-                    <div className="relative">
-                        {/* Connecting Line */}
-                        <div className="hidden lg:block absolute left-0 right-0 top-1/2 h-1 bg-linear-to-r from-cyan-500 via-teal-500 to-amber-500 -translate-y-1/2" />
 
-                        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                            {processSteps.map((step, index) => {
-                                const Icon = step.icon;
-                                return (
-                                    <motion.div
-                                        key={step.step}
-                                        initial={{ opacity: 0, y: 30 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                                        onClick={() => setActiveStep(step.step - 1)}
-                                        className="relative"
-                                    >
-                                        <div className={`relative group cursor-pointer ${activeStep === step.step - 1 ? 'scale-105' : ''}`}>
-                                            {/* Step Number */}
-                                            <div className="absolute -top-4 -left-4 z-10">
-                                                <div className={`w-12 h-12 rounded-full bg-linear-to-r ${step.color} text-white flex items-center justify-center text-lg font-bold shadow-lg`}>
-                                                    {step.step}
-                                                </div>
-                                            </div>
 
-                                            {/* Card */}
-                                            <div className={`bg-white rounded-3xl p-6 pt-10 shadow-xl border-2 transition-all duration-300 ${activeStep === step.step - 1 ? 'border-cyan-300 shadow-2xl shadow-cyan-500/25' : 'border-gray-100 shadow-gray-200/50'}`}>
-                                                <div className={`inline-flex p-3 rounded-xl bg-linear-to-r ${step.color} mb-4`}>
-                                                    <Icon className="w-6 h-6 text-white" />
-                                                </div>
 
-                                                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                                                    {step.title}
-                                                </h3>
-                                                <p className="text-gray-600 text-sm mb-4">
-                                                    {step.description}
-                                                </p>
-
-                                                <div className="flex items-center justify-between">
-                                                    <span className="text-sm font-medium text-gray-500">
-                                                        {step.duration}
-                                                    </span>
-                                                    {activeStep === step.step - 1 && (
-                                                        <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse" />
-                                                    )}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                );
-                            })}
-                        </div>
-                    </div>
-
-                    {/* Active Step Details */}
-                    <motion.div
-                        key={activeStep}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="mt-12"
-                    >
-                        <div className="bg-linear-to-r from-cyan-50 to-teal-50 rounded-3xl p-8">
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className={`p-3 rounded-xl bg-linear-to-r ${processSteps[activeStep].color}`}>
-                                    {React.createElement(processSteps[activeStep].icon, { className: "w-6 h-6 text-white" })}
-                                </div>
-                                <div>
-                                    <div className="text-sm font-semibold text-cyan-700 uppercase tracking-wider">
-                                        Step {processSteps[activeStep].step}
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-gray-900">
-                                        {processSteps[activeStep].title}
-                                    </h3>
-                                </div>
-                            </div>
-
-                            <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                                {processSteps[activeStep].description}
-                            </p>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                {[
-                                    "Personal consultation with lead travel designer",
-                                    "Detailed questionnaire about preferences and expectations",
-                                    "Initial destination and experience recommendations",
-                                    "Preliminary timeline and budget discussion",
-                                    "Introduction to your dedicated concierge team"
-                                ].map((item, index) => (
-                                    <div key={index} className="flex items-start gap-3">
-                                        <CheckCircle className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span className="text-gray-700">{item}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* Interest Selector */}
-            <section className="py-20 bg-linear-to-b from-white to-gray-50">
-                <div className="max-w-6xl mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-center mb-12"
-                    >
-                        <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-linear-to-r from-purple-50 to-pink-50 rounded-full">
-                            <Heart className="w-5 h-5 text-purple-600" />
-                            <span className="text-sm font-semibold text-purple-700 uppercase tracking-widest">
-                                Your Interests
-                            </span>
-                        </div>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                            What <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-600">Inspires</span> You?
-                        </h2>
-                        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                            Select your passions to help us craft experiences that truly resonate with you.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
-                        {interests.map((interest, index) => {
-                            const Icon = interest.icon;
-                            const isSelected = selectedInterest.includes(interest.label);
-                            return (
-                                <motion.button
-                                    key={index}
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={() => toggleInterest(interest.label)}
-                                    className={`flex flex-col items-center justify-center p-4 rounded-2xl border-2 transition-all duration-300 ${isSelected
-                                        ? 'bg-linear-to-r from-purple-50 to-pink-50 border-purple-300 shadow-lg shadow-purple-500/25'
-                                        : 'bg-white border-gray-200 hover:border-purple-200'
-                                        }`}
-                                >
-                                    <div className={`p-3 rounded-xl mb-3 ${isSelected
-                                        ? 'bg-linear-to-r from-purple-500 to-pink-500'
-                                        : 'bg-gray-100'
-                                        }`}>
-                                        <Icon className={`w-6 h-6 ${isSelected ? 'text-white' : 'text-gray-600'}`} />
-                                    </div>
-                                    <span className={`text-sm font-medium ${isSelected ? 'text-gray-900' : 'text-gray-700'}`}>
-                                        {interest.label}
-                                    </span>
-                                </motion.button>
-                            );
-                        })}
-                    </div>
-
-                    <div className="text-center">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 bg-linear-to-r from-purple-600 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300"
-                        >
-                            Continue with {selectedInterest.length} interests selected
-                        </motion.button>
-                    </div>
                 </div>
             </section>
 
