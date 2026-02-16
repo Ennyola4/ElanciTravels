@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import {  MapPin, Star, ChevronRight, Search, Filter, TrendingUp, ChevronLeft, ChevronDown, Grid, List } from "lucide-react";
+import { MapPin, Star, ChevronRight, Search, Filter, TrendingUp, ChevronLeft, ChevronDown, Grid, List } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 const Destination = () => {
@@ -177,8 +177,7 @@ const Destination = () => {
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10"
                         >
-                            Every destination in our unparalleled portfolio is chosen with care, intention, and a sense of refined taste.
-                            We highlight not entire countries, but the cities within them that truly embody luxury, culture, and atmosphere.
+                            Curated cities. Defined by luxury, culture, and atmosphere.
                         </motion.p>
                     </div>
                 </div>
