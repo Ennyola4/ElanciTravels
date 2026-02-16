@@ -379,7 +379,7 @@ const Destination = () => {
                                     className="group"
                                 >
                                     <div className="bg-white rounded-2xl p-6 shadow-lg shadow-gray-200/30 border border-gray-100 hover:border-cyan-200 transition-all duration-300">
-                                        <div className="flex items-center gap-6">
+                                        <div className="flex-row items-center gap-6 sm:flex-col">
                                             {/* Image */}
                                             <div className="relative w-32 h-32 rounded-xl overflow-hidden shrink-0">
                                                 <img

@@ -1,6 +1,30 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+
+const text = "ÉLANCI TRAVEL";
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15, 
+    },
+  },
+};
+
+const letter = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+    },
+  },
+};
+
+
 const HomeCarousel = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -57,12 +81,16 @@ const HomeCarousel = () => {
 
           {/* Title */}
           <motion.h1
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            variants={container}
+            initial="hidden"
+            animate={!isLoading ? "visible" : "hidden"}   
             className="text-4xl sm:text-4xl lg:text-5xl font-bold leading-tight"
           >
-             ÉLANCI TRAVEL
+            {text.split("").map((char, index) => (
+              <motion.span key={index} variants={letter}>
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
           </motion.h1>
 
           {/* Description */}
@@ -72,7 +100,7 @@ const HomeCarousel = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg sm:text-xl text-gray-200 leading-relaxed mx-auto"
           >
-           Curated, Refined, Elanci.
+            Curated, Refined, Elanci.
           </motion.p>
 
         </div>
