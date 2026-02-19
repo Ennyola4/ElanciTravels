@@ -74,33 +74,6 @@ const TheBrand = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Alexander Sterling",
-      role: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
-      expertise: ["Luxury Hospitality", "Global Networks", "Experience Design"]
-    },
-    {
-      name: "Isabelle Moreau",
-      role: "Creative Director",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop",
-      expertise: ["Cultural Immersion", "Art Curation", "Wellness Integration"]
-    },
-    {
-      name: "Marcus Chen",
-      role: "Head of Operations",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-      expertise: ["Logistics Mastery", "Risk Management", "VIP Services"]
-    },
-    {
-      name: "Sophia Rossi",
-      role: "Client Relations Director",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1974&auto=format&fit=crop",
-      expertise: ["Personal Concierge", "Crisis Resolution", "Luxury Retail"]
-    }
-  ];
-
   const awards = [
     { year: "2023", title: "World's Best Luxury Travel Company", organization: "Travel + Leisure" },
     { year: "2022", title: "Excellence in Sustainable Tourism", organization: "Global Travel Awards" },
@@ -291,71 +264,6 @@ const TheBrand = () => {
               </div>
             </motion.div>
           </div>
-
- 
-
-          {/* Leadership Team */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mb-20"
-          >
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-linear-to-r from-purple-50 to-violet-50 rounded-full">
-                <Users className="w-5 h-5 text-purple-600" />
-                <span className="text-sm font-semibold text-purple-700 uppercase tracking-widest">
-                  The Minds Behind
-                </span>
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Leadership</h3>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                A team of passionate experts dedicated to redefining luxury travel through innovation, insight, and impeccable service.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {team.map((member, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -10 }}
-                  className="group"
-                >
-                  <div className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 border border-gray-100">
-                    {/* Image */}
-                    <div className="relative h-64 overflow-hidden">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-linear-to-t from-gray-900/60 to-transparent" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      <h4 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h4>
-                      <p className="text-cyan-600 font-medium mb-4">{member.role}</p>
-
-                      <div className="space-y-2">
-                        {member.expertise.map((skill, skillIndex) => (
-                          <div key={skillIndex} className="flex items-center gap-2">
-                            <Star className="w-3 h-3 text-amber-500 fill-current" />
-                            <span className="text-sm text-gray-600">{skill}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
 
           {/* Awards & Recognition */}
           <motion.div

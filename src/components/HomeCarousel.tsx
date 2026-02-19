@@ -8,7 +8,7 @@ const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15, 
+      staggerChildren: 0.10, 
     },
   },
 };
@@ -102,6 +102,7 @@ const HomeCarousel = () => {
           >
             Curated, Refined, Elanci.
           </motion.p>
+          
 
         </div>
       </div>

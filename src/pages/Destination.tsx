@@ -520,7 +520,7 @@ const Destination = () => {
                         className="mt-20"
                     >
                         <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-gray-900 to-gray-800">
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2135&auto=format&fit=crop')] opacity-20 bg-cover bg-center" />
+                            <div className="absolute inset-0 bg-[url('https://visaliv.com/business-directories/uploads/listing_thumbnails/travel-agency27.jpg')] opacity-30 bg-cover bg-center" />
                             <div className="relative z-10 px-8 py-12 text-center">
                                 <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
                                 <h3 className="text-3xl font-bold text-white mb-4">
