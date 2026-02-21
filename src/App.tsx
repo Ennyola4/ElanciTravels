@@ -8,6 +8,7 @@ import Bespoke from "./pages/Bespoke";
 import Services from "./pages/Services";
 import TheBrand from "./pages/TheBrand";
 import { Toaster } from "react-hot-toast";
+import Rail from "./pages/experiences/Rail";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/thebrand" element={< TheBrand />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/experiences/:slug" element={<Rail />} />
       </Routes>
       <Footer />
     </>

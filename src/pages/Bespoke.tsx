@@ -6,7 +6,7 @@ import {
     Calendar,
     Zap,
     ChevronRight,
-    
+
 } from "lucide-react";
 
 const Bespoke = () => {
@@ -46,47 +46,38 @@ const Bespoke = () => {
 
     const exclusiveExperiences = [
         {
-            title: "Private Louvre Tour",
+            title: "Rail",
             description:
-                "Exclusive after-hours access to the world's most famous museum.",
-            location: "Paris, France",
-            capacity: "2-6 guests",
-            duration: "3 hours",
-            price: "€15,000+",
-            image: "/ElanciLogo.jpg",
-            slug: "private-louvre-tour",
+                "The Grand Continental Journey.",
+            image: "/rail.jpg",
+            slug: "rail",
         },
         {
-            title: "Safari in Style",
+            title: "Wild",
             description:
-                "Private game reserves with luxury tented camps and expert trackers.",
-            location: "Serengeti, Tanzania",
-            capacity: "Exclusive use",
-            duration: "5-10 nights",
-            price: "$50,000+",
+                "Luxury African Safaris.",
             image: "/safari.jpg",
             slug: "safari-in-style",
         },
         {
-            title: "Alpine Helicopter Dining",
+            title: "Winter",
             description:
-                "Private helicopter to mountain peaks for gourmet dining with panoramic views.",
-            location: "Swiss Alps",
-            capacity: "2-8 guests",
-            duration: "Evening",
-            price: "€25,000+",
+                "The Alpine Elite",
             image: "/ski.jpeg",
             slug: "alpine-helicopter-dining",
         },
         {
-            title: "Yacht Exploration",
+            title: "Voyage",
             description:
-                "Crewed luxury yacht through hidden Mediterranean coves and islands.",
-            location: "French Riviera",
-            capacity: "Up to 12 guests",
-            duration: "7-14 nights",
-            price: "$120,000+",
+                "The ultimate Yatch experience",
             image: "/yatch.jpeg",
+            slug: "yacht-exploration",
+        },
+        {
+            title: "Sea",
+            description:
+                "The Red Sea escape.",
+            image: "/sea.jpeg",
             slug: "yacht-exploration",
         },
     ];
@@ -112,7 +103,7 @@ const Bespoke = () => {
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="text-center px-4 max-w-6xl">
-                       
+
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -177,7 +168,7 @@ const Bespoke = () => {
 
                                 {/* Content Overlay */}
                                 <div className="absolute inset-0 flex flex-col justify-end p-8">
-                                    <div className="backdrop-blur-xs bg-white/10 border border-white/20 rounded-2xl p-6 text-white shadow-xl">
+                                    <div className=" bg-white/10 border border-white/20 rounded-2xl p-6 text-white shadow-xl">
 
                                         <div className="flex justify-between items-start mb-4">
                                             <div>
