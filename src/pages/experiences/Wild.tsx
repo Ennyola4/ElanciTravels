@@ -95,7 +95,7 @@ const Wild = () => {
             </div>
 
             {/* ================= OVERVIEW + TABS ================= */}
-            <section className="py-24 px-4">
+            <section className=" px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
 

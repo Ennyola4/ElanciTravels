@@ -196,7 +196,7 @@ const Rail = () => {
       </div>
 
       {/* ================= MODERN OVERVIEW WITH TABS ================= */}
-      <section className="py-24 px-4">
+      <section className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
