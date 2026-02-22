@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
   Star,
   Sparkles,
@@ -8,8 +9,10 @@ import {
   Wifi,
   Coffee,
   Shield,
-  ChevronRight,
-  X
+  X,
+  
+  
+  CornerUpLeft
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -20,6 +23,7 @@ const Rail = () => {
 
   const [selectedImage, setSelectedImage] = useState<any>(null);
   const [activeTab, setActiveTab] = useState("overview");
+  const navigate = useNavigate()
 
   const gallery = [
     {
@@ -115,6 +119,7 @@ const Rail = () => {
             />
           ))}
         </div>
+       
 
         <div className="relative z-10 text-center px-6 max-w-5xl">
           <motion.div
@@ -122,6 +127,11 @@ const Rail = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+             <CornerUpLeft
+             onClick={()=>{
+              navigate(-1)
+             }}
+              className="text-white cursor-pointer transform transition-all duration-300 ease-in-out hover:scale-150 active:scale-95"/>
             <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white text-sm mb-6 border border-white/20">
               ✦ Luxury Rail Travel Redefined
             </span>
@@ -138,6 +148,7 @@ const Rail = () => {
               Rail Journey
             </span>
           </motion.h1>
+          
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -149,20 +160,7 @@ const Rail = () => {
             comfort, and discovery travel hand in hand.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition rounded-xl font-semibold text-white flex items-center justify-center gap-2">
-              Explore Journeys
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition" />
-            </button>
-            <button className="px-8 py-4 bg-white/10 backdrop-blur-md hover:bg-white/20 transition rounded-xl font-semibold text-white border border-white/30">
-              View Brochure
-            </button>
-          </motion.div>
+        
         </div>
 
         {/* Scroll indicator */}
@@ -365,17 +363,17 @@ const Rail = () => {
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      className="grid grid-cols-3 gap-4"
+                      className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                     >
-                      <div>
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">15+</div>
                         <div className="text-sm text-gray-200">Destinations</div>
                       </div>
-                      <div>
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">10</div>
                         <div className="text-sm text-gray-200">Luxury Trains</div>
                       </div>
-                      <div>
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">24/7</div>
                         <div className="text-sm text-gray-200">Concierge</div>
                       </div>
@@ -386,17 +384,17 @@ const Rail = () => {
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      className="grid grid-cols-3 gap-4"
+                      className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                     >
-                      <div>
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">5</div>
                         <div className="text-sm text-gray-200">Scenic Routes</div>
                       </div>
-                      <div>
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">300°</div>
                         <div className="text-sm text-gray-200">Panoramic Views</div>
                       </div>
-                      <div>
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">4</div>
                         <div className="text-sm text-gray-200">Countries</div>
                       </div>
@@ -407,17 +405,17 @@ const Rail = () => {
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      className="grid grid-cols-3 gap-4"
+                      className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                     >
-                      <div>
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">⭐️</div>
                         <div className="text-sm text-gray-200">Michelin-Star</div>
                       </div>
-                      <div>
+                      <div className=" bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">50+</div>
                         <div className="text-sm text-gray-200">Wine Labels</div>
                       </div>
-                      <div>
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
                         <div className="text-2xl font-bold">24/7</div>
                         <div className="text-sm text-gray-200">Room Service</div>
                       </div>
@@ -431,7 +429,7 @@ const Rail = () => {
                 key={`caption-${activeTab}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-sm text-gray-500 mt-3 text-center"
+                className="text-sm text-gray-500 mt-8 text-center"
               >
                 {activeTab === "overview"
                   ? "Elegant private suites with panoramic windows"
@@ -445,7 +443,7 @@ const Rail = () => {
       </section>
 
       {/* ================= ELANCI SIGNATURE RAIL EXPERIENCE WITH GALLERY ================= */}
-      <section className="bg-white py-20 px-4 md:py-36 md:px-6">
+      <section className="bg-white py-20 px-4 md:py-8 md:px-6">
 
         <div className="max-w-6xl mx-auto">
 
@@ -455,7 +453,7 @@ const Rail = () => {
               Signature Journey
             </p>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-900">
+            <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl font-light leading-tight text-gray-900">
               The Grand European Rail
             </h2>
 
@@ -502,7 +500,7 @@ const Rail = () => {
           ].map((item, i) => (
             <div
               key={i}
-              className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center mb-20 md:mb-32"
+              className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-2 gap-10 md:gap-16 items-center mb-20 md:mb-32"
             >
               {i % 2 === 0 ? (
                 <>

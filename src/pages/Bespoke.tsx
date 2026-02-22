@@ -57,28 +57,28 @@ const Bespoke = () => {
             description:
                 "Luxury African Safaris.",
             image: "/safari.jpg",
-            slug: "safari-in-style",
+            slug: "wild",
         },
         {
             title: "Winter",
             description:
                 "The Alpine Elite",
             image: "/ski.jpeg",
-            slug: "alpine-helicopter-dining",
+            slug: "winter",
         },
         {
             title: "Voyage",
             description:
                 "The ultimate Yatch experience",
-            image: "/yatch.jpeg",
-            slug: "yacht-exploration",
+            image: "/voyage2.jpg",
+            slug: "voyage",
         },
         {
             title: "Sea",
             description:
                 "The Red Sea escape.",
-            image: "/sea.jpeg",
-            slug: "yacht-exploration",
+            image: "/yatch.jpeg",
+            slug: "sea",
         },
     ];
 
