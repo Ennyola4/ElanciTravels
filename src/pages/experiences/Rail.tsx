@@ -365,15 +365,15 @@ const Rail = () => {
                       animate={{ y: 0, opacity: 1 }}
                       className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                     >
-                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl  rounded-2xl">
                         <div className="text-2xl font-bold">15+</div>
                         <div className="text-sm text-gray-200">Destinations</div>
                       </div>
-                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl  rounded-2xl">
                         <div className="text-2xl font-bold">10</div>
                         <div className="text-sm text-gray-200">Luxury Trains</div>
                       </div>
-                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl rounded-2xl">
                         <div className="text-2xl font-bold">24/7</div>
                         <div className="text-sm text-gray-200">Concierge</div>
                       </div>
@@ -386,15 +386,15 @@ const Rail = () => {
                       animate={{ y: 0, opacity: 1 }}
                       className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                     >
-                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl rounded-2xl">
                         <div className="text-2xl font-bold">5</div>
                         <div className="text-sm text-gray-200">Scenic Routes</div>
                       </div>
-                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl rounded-2xl">
                         <div className="text-2xl font-bold">300°</div>
                         <div className="text-sm text-gray-200">Panoramic Views</div>
                       </div>
-                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl rounded-2xl">
                         <div className="text-2xl font-bold">4</div>
                         <div className="text-sm text-gray-200">Countries</div>
                       </div>
@@ -407,15 +407,15 @@ const Rail = () => {
                       animate={{ y: 0, opacity: 1 }}
                       className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                     >
-                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className="bg-white/10  p-6 text-white shadow-xl  rounded-2xl">
                         <div className="text-2xl font-bold">⭐️</div>
                         <div className="text-sm text-gray-200">Michelin-Star</div>
                       </div>
-                      <div className=" bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className=" bg-white/10  p-6 text-white shadow-xl  rounded-2xl">
                         <div className="text-2xl font-bold">50+</div>
                         <div className="text-sm text-gray-200">Wine Labels</div>
                       </div>
-                      <div className="bg-white/10 border border-white/20 p-6 text-white shadow-xl backdrop-blur-xs rounded-2xl">
+                      <div className="bg-white/10  p-6 text-white shadow-xl  rounded-2xl">
                         <div className="text-2xl font-bold">24/7</div>
                         <div className="text-sm text-gray-200">Room Service</div>
                       </div>

@@ -275,17 +275,17 @@ const Wild = () => {
                                         animate={{ y: 0, opacity: 1 }}
                                         className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                                     >
-                                        <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-gray-50/30 shadow-lg">
+                                        <div className="bg-white/10  p-4 rounded-xl  shadow-lg">
                                             <div className="text-2xl font-bold">12+</div>
                                             <div className="text-sm text-gray-200">Reserves</div>
                                         </div>
 
-                                        <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-gray-50/30 shadow-lg">
+                                        <div className="bg-white/10  p-4 rounded-xl  shadow-lg">
                                             <div className="text-2xl font-bold">Big 5</div>
                                             <div className="text-sm text-gray-200">Wildlife</div>
                                         </div>
 
-                                        <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-gray-50/30 shadow-lg">
+                                        <div className="bg-white/10  p-4 rounded-xl  shadow-lg">
                                             <div className="text-2xl font-bold">24/7</div>
                                             <div className="text-sm text-gray-200">Concierge</div>
                                         </div>
