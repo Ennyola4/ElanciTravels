@@ -93,7 +93,7 @@ const Bespoke = () => {
                         initial={{ scale: 1.2 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 2 }}
-                        className="absolute inset-0 bg-cover bg-center bg-fixed"
+                        className="absolute inset-0 bg-cover bg-center"
                         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop')", }} />
                     <div className="absolute inset-0 bg-linear-to-b from-gray-900/90 via-gray-900/50 to-transparent" />
                 </div>
